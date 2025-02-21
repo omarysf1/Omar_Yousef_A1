@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Omar_Yousef_A1.MainPage"
+             Title="Wordle Helper">
+    <VerticalStackLayout Spacing="15" Padding="20">
+        <Label Text="Wordle Helper" FontSize="32" HorizontalOptions="Center"/>
+
+        <Grid x:Name="LettersGrid" ColumnSpacing="5" RowSpacing="5" HorizontalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="LetterLabel1" Grid.Column="0" BackgroundColor="LightGray" Text="" FontSize="24" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="60"/>
+            <Label x:Name="LetterLabel2" Grid.Column="1" BackgroundColor="LightGray" Text="" FontSize="24" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="60"/>
+            <Label x:Name="LetterLabel3" Grid.Column="2" BackgroundColor="LightGray" Text="" FontSize="24" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="60"/>
+            <Label x:Name="LetterLabel4" Grid.Column="3" BackgroundColor="LightGray" Text="" FontSize="24" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="60"/>
+            <Label x:Name="LetterLabel5" Grid.Column="4" BackgroundColor="LightGray" Text="" FontSize="24" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="60"/>
+        </Grid>
+
+        <Entry x:Name="GuessEntry" Placeholder="Enter a 5-letter word" WidthRequest="300" HorizontalOptions="Center" TextChanged="OnGuessTextChanged"/>
+
+        <Button Text="Submit Guess" Clicked="OnSubmitClicked" HorizontalOptions="Center"/>
+        <Button Text="Show Hint" Clicked="OnShowHintClicked" HorizontalOptions="Center"/>
+        <Button Text="Show Answer" Clicked="OnShowAnswerClicked" HorizontalOptions="Center"/>
+        <Button Text="Show Stats" Clicked="OnShowStatsClicked" HorizontalOptions="Center"/>
+
+        <Label Text="Created by Omar Yousef" FontSize="14" HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>
